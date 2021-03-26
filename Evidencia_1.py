@@ -72,13 +72,19 @@ while switch:
                 lista_ventas = []
 
     elif opcion == 2:
-        ID = int(input("Ingresa el No. de venta a consultar: "))
-        print("\n")
-        _lista =Base_De_Datos[ID][0]
-        df = pd.DataFrame(_lista, columns=['[Articulo/Detalle]','[Cantidad Comprado]','[Precio Unitario]'])
-        print("Venta No.{}".format(ID))
-        print(df)
-        print("\n")
+        while True:
+            ID = int(input("Ingresa el No. de venta a consultar: "))
+            print("\n")
+            if ID in Base_De_Datos.keys():
+                _lista =Base_De_Datos[ID][0]
+                df = pd.DataFrame(_lista, columns=['[Articulo/Detalle]','[Cantidad Comprado]','[Precio Unitario]'])
+                print("Venta No.{}".format(ID))
+                print(df)
+                print("\n")
+                break
+            else:
+                print("El No. de Venta no existe")
+                print("\n")
 
     elif opcion == 3:
         switch = False
