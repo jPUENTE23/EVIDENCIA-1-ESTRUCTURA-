@@ -22,7 +22,6 @@ while switch:
                 cant_datos = int(input("Cuanto articulos se van a registrar en la venta?: "))
                 print("\n")
                 for dato in range(cant_datos):
-                    print("\n")
                     articulo = input("Descripcion o nombre del articulo: ")
                     cantidad  = int(input("Cantidad: " ))
                     precio = float(input("Precio x ud: "))
@@ -37,7 +36,6 @@ while switch:
                 total_venta = sum(lista_totales)
                 Base_De_Datos[NoDeVenta] = [lista_ventas]
 
-                print("\n")
                 print("Total a pagar......... {}".format(total_venta))
                 print("\n")
 
@@ -55,7 +53,7 @@ while switch:
                     articulo = input("Descripcion o nombre del articulo: ")
                     cantidad  = int(input("Cantidad: " ))
                     precio = float(input("Precio x ud: "))
-
+                    print("\n")
                     total = precio * cantidad
                     lista_totales.append(total)
 
@@ -65,7 +63,7 @@ while switch:
                 total_venta = sum(lista_totales)
                 Base_De_Datos[NoDeVenta] = [lista_ventas]
 
-                print("\n")
+
                 print("Total a pagar......... {}".format(total_venta))
                 print("\n")
 
